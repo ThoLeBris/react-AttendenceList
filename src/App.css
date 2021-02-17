@@ -1,0 +1,78 @@
+
+.App {
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: cornsilk;
+}
+
+.container{
+  height: 80vh;
+  width: 50vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: antiquewhite;
+
+  border-radius: 30px;
+}
+.container h2{
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+
+  background-color: rgb(247, 223, 188);
+
+  border-radius: 50px;
+}
+
+.btn-clear{
+  margin: 50px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: beige;
+
+  text-transform: uppercase;
+  font-weight: bold;
+
+  transition: all 0.2 ease-in-out;
+}
+.btn-clear:hover{
+  transform: scale(1.02);
+}
+
+.student{
+  height: 50px;
+  width: 20vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
+article p{
+  width: 15vw;
+  border-radius: 5px;
+}
+.present{
+  background: linear-gradient(to right, green, cornsilk);
+}
+.absent{
+  background: linear-gradient(to right, crimson, cornsilk);
+}
