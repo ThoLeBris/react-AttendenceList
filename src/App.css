@@ -1,4 +1,6 @@
-
+body{
+    background-color: cornsilk;
+}
 .App {
   text-align: center;
 }
@@ -8,12 +10,15 @@
 }
 
 main{
+  
+  height: 100vh;
+
+}
+
+.bloc{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
-  background-color: cornsilk;
 }
 
 .container{
@@ -48,10 +53,10 @@ main{
   text-transform: uppercase;
   font-weight: bold;
 
-  transition: all 0.2 ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .btn-clear:hover{
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 .student{
@@ -63,16 +68,85 @@ main{
   justify-content: space-around;
 
   border: 1px solid black;
+  box-shadow: 0px 0px 3px black;
   border-radius: 5px;
+  
+  
   margin: 5px;
+  
+  transition: all 0.4s ease-in-out;
 }
 article p{
   width: 15vw;
   border-radius: 5px;
+
 }
 .present{
-  background: linear-gradient(to right, green, cornsilk);
+  background: linear-gradient(to right, green, antiquewhite);
 }
 .absent{
-  background: linear-gradient(to right, crimson, cornsilk);
+  background: linear-gradient(to right, crimson, antiquewhite);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  
+  margin: 30px;
+  margin-top: 10px;
+  height: 100px;
+  width: auto;
+}
+
+.nav-item{
+  
+  list-style: none;
+  font-size: 20px;
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  padding: 5px;
+
+  border: 2px solid lightsteelblue;
+  color: white;
+  border-radius: 5px;
+
+  transition: all 0.2s ease-in-out;
+}
+.nav-item:hover{
+  background-color: lightsteelblue;
+}
+
+ul{
+background: rgba(0, 0, 0, 0.5);
+
+box-shadow: 0px 0px 5px black;
+border-radius: 20px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 5px;
+}
+ul a{
+  text-decoration: none;
+
+}
+.selected{
+  background-color: lightsteelblue;
+  height: 50px;
+  width: 100px;
+
+  margin: 10px;
+  padding: 5px;
+
+  border: 2px solid lightsteelblue;
+  border-radius: 5px;
+
+  transition: all 0.2s ease-in-out;
 }

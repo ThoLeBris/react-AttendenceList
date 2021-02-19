@@ -1,19 +1,40 @@
-import React, { useState } from 'react'
 import './App.css';
-import data from './data'
-import List from './components/List';
+import NavBar from './components/NavBar';
+// imbr , imbrs , imbrr       équivalent de la ligne du dessous
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Accueil from './pages/Accueil';
+import Projets from './pages/Projets';
+import Contact from './pages/Contact';
+
+
+
+const routes = [
+  { path:"/", name:"Accueil", Component: Accueil},
+  { path:"/projets", name:"Projets", Component: Projets},
+  { path:"/contact", name:"Contact", Component: Contact},
+]
+
 
 function App() {
-  const [student, setStudent] = useState(data);
   
   return (
-    <main>
-      <section className="container">
-        <h2>Attendence List for {student.length} students</h2>
-        <List student ={student} className="student-bloc"/>
-        <button onClick = {()=>setStudent([])} className="btn-clear">Clear List</button>
-      </section>
-    </main>
+    <Router>
+      <main>
+        <NavBar/>
+            <Switch>
+              {routes.map(({path, Component})=>(
+                <Route key={path} exact path={path}>
+                  {()=>(
+                      <>
+                        <Component/>
+                      </>
+                  )}
+                </Route>
+              ))}
+          </Switch>
+      </main>
+    </Router>
   );
 }
 
